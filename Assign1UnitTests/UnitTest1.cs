@@ -42,11 +42,6 @@ namespace Hello_World.Tests
             Assert.AreEqual(DateTime.Now.ToShortDateString(), date);
         }
 
-        [TestMethod]
-        public void CheckShortDateFail()
-        {
-            Assert.IsNotNull(null);
-        }
 
         [TestMethod]
         public void CheckDinoSort()
