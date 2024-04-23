@@ -43,6 +43,12 @@ namespace Hello_World.Tests
         }
 
         [TestMethod]
+        public void CheckShortDateFail()
+        {
+            Assert.IsNotNull(null);
+        }
+
+        [TestMethod]
         public void CheckDinoSort()
         {
             List<string> dinos = new List<string>()
