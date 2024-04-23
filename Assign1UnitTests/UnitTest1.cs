@@ -61,19 +61,20 @@ namespace Hello_World.Tests
                     };
 
             var finalres = dinos.OrderBy(n => n).ToList<string>();
+            bool check = true;
             for (var x = 0; x < 100; x++)
             {
-                bool check = false;
+                
                 string output = Functions.RandomDinoSort();
                 for (int i = 0; i < finalres.Count; i++)
                 {
-                    if (output == finalres[i].ToString() + " index " + i)
+                    if (output != finalres[i].ToString() + " index " + i)
                     {
-                        check = true;
+                        check = false;
                     }
                 }
-                Assert.IsTrue(check);
             }
+            Assert.IsTrue(check);
         }
 
         [DataTestMethod]
